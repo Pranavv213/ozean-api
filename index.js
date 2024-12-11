@@ -530,9 +530,9 @@ const iface = new ethers.utils.Interface(contractAbi);
 
 
 
-    app.get('/stakeAndMint/:address', (req, res) => {
+    app.get('/stakeAndMint', (req, res) => {
 
-        const { address } = req.params;
+        const { address } = req.query;
 
         hasInteractedWithStakeAndMint(address)
         .then(interacted => {
@@ -546,9 +546,10 @@ const iface = new ethers.utils.Interface(contractAbi);
         });
       });
       
-      app.get('/bridgeOnSepolia/:address', (req, res) => {
+      app.get('/bridgeOnSepolia', (req, res) => {
 
-        const { address } = req.params;
+        const { address } = req.query;
+       
 
         hasInteractedWithBridgeOnSepolia(address)
         .then(interacted => {
@@ -562,9 +563,9 @@ const iface = new ethers.utils.Interface(contractAbi);
         });
       });
 
-      app.get('/wrapAndMint/:address', (req, res) => {
+      app.get('/wrapAndMint', (req, res) => {
 
-        const { address } = req.params;
+        const { address } = req.query;
 
         hasInteractedWithWrapAndMint(address)
         .then(interacted => {
