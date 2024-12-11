@@ -537,7 +537,9 @@ const iface = new ethers.utils.Interface(contractAbi);
         hasInteractedWithStakeAndMint(address)
         .then(interacted => {
           console.log("Has interacted:", interacted); // true or false
-          res.send(interacted)
+          let obj={"data":{"result":interacted}}
+          
+          res.send(obj)
         })
         .catch(error => {
           console.error("Error:", error);
@@ -551,7 +553,9 @@ const iface = new ethers.utils.Interface(contractAbi);
         hasInteractedWithBridgeOnSepolia(address)
         .then(interacted => {
           console.log("Has interacted:", interacted); // true or false
-          res.send(interacted)
+        let obj={"data":{"result":interacted}}
+          
+          res.send(obj)
         })
         .catch(error => {
           console.error("Error:", error);
@@ -565,7 +569,9 @@ const iface = new ethers.utils.Interface(contractAbi);
         hasInteractedWithWrapAndMint(address)
         .then(interacted => {
           console.log("Has interacted:", interacted); // true or false
-          res.send(interacted)
+          let obj={"data":{"result":interacted}}
+          
+          res.send(obj)
         })
         .catch(error => {
           console.error("Error:", error);
